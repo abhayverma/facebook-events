@@ -3,9 +3,11 @@
 namespace App\Repositories;
 
 use App\User;
+use Log;
 
 class UserRepository
 {
+
     public function syncUser($userData)
     {
         if ( $user = $this->userRecordExists($userData->id) )
@@ -17,7 +19,7 @@ class UserRepository
 	        return $user;
 	    }
 
-	    return $this->user->firstOrCreate([
+	    return User::firstOrCreate([
 	        'email'      => $userData->email,
 	        'fbid'  	 => $userData->id,
 	        'username'   => $userData->name,
@@ -27,6 +29,6 @@ class UserRepository
 
     private function userRecordExists($userID)
 	{
-	    return $this->user->where('fbid', $userID)->first();
+	    return User::where('fbid', $userID)->first();
 	}
 }

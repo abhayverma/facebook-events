@@ -11,16 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    
-    if(Auth::check()) return view('home');//'Welcome back, ' . Auth::user()->username;
-    
-    return view('welcome') ;
-});
+// Landing Page
+Route::get('/', 'SocialAuthController@index');
 
 //Social Login
-Route::get('/login', 'SocialAuthController@login');
-
-Route::get('/modeltest', 'SocialAuthController@modelTests');
+Route::get('/login/callback', 'SocialAuthController@handleCallback');
 
 Route::get('/home', 'MainController@listPages');
+
+Route::get('/logout', 'MainController@forgetUser');
+
+Route::get('/events/{page_id}', 'MainController@getEvents');
