@@ -21,4 +21,4 @@ Route::get('/home', 'MainController@listPages');
 
 Route::get('/logout', 'MainController@forgetUser');
 
-Route::get('/events/{page_id}', 'MainController@getEvents');
+Route::get('/events/{page_id}', 'MainController@listEvents');

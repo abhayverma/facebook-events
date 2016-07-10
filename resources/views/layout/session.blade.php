@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>@yield('title')</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -10,16 +10,9 @@
   <style>
     /* Remove the navbar's default rounded borders and increase the bottom margin */ 
     .navbar {
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       border-radius: 0;
     }
-
-    .navbar-inverse{
-      background-color: #006064;
-      border-color: #006064;
-    }
-
-    a{ color : #03A9F4; }
 
     a:hover, a:focus {
       text-decoration: none;
@@ -27,13 +20,7 @@
 
     .navbar-brand{ padding: 2px; }
 
-    .panel-primary{ border-color: #03A9F4; }
     .navbar-inverse .navbar-nav > li > a{color: #E0F7FA;}
-    
-    /* Remove the jumbotron's default bottom margin */ 
-     .jumbotron {
-      margin-bottom: 0;
-    }
    
     /* Add a gray background color and some padding to the footer */
     footer {
@@ -58,6 +45,7 @@
         <li><a>Welcome, {{ Session::get('name') }}</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
         <li><a href="/logout"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
       </ul>
     </div>
@@ -66,7 +54,7 @@
 
 
 
-<div class="container">    
+<div class="container-fluid">  
   @yield('content')
 </div><br><br>
 

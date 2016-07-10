@@ -45,7 +45,7 @@ class FacebookHelper
         return $response->getGraphUser();
 	}
 
-	public function getPages($fields, $accessToken)
+	public function getData($fields, $accessToken)
 	{
 		try {
             // Returns a `Facebook\FacebookResponse` object
