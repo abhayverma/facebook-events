@@ -7,68 +7,7 @@ Events Listing
 @section('content')
 	
 	<style type="text/css">
-		.carousel-inner img {
-			width: 100%; /* Set width to 100% */
-			margin: auto;
-			min-height:200px;
-			max-height: 450px;
-		}
-
-		h1, h2, h3, h4, h5{font-family: 'PT Sans Narrow', sans-serif;}
-
-		.carousel-caption{
-			text-shadow: none; color:black; padding: 0; padding-left: 2%; padding-right: 1%; text-align: left; 
-			background-color: white; height: 80%;
-			overflow: hidden;
-		}
-
-		.carousel-caption h4{color: grey;}
-
-		.carousel-caption.visible-lg.visible-md{ 
-			top: 10%; transform: translateX(-40%); width: 25%; 
-		}
-
-		.book-event{ border-radius: 0;}
-
-		.carousel-caption.visible-lg.visible-md .book-event{position: absolute; right: 5%; bottom: 5%;}
-
-		.carousel-caption.visible-xs.visible-sm .book-event{float: right; margin: 10%}
-
-		.carousel-caption.visible-xs.visible-sm{transform: none; overflow-y:scroll;}
-
-		.transparent-overlay{
-			position: absolute;
-		    top: 0px;
-		    bottom: 0px;
-		    left: 0px;
-		    width: 30%;
-		    font-size: 20px;
-		    color: #FFF;
-		    text-align: center;
-		    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.8);
-		    background-color: transparent;
-		    z-index: 1;
-			background:rgba(255,255,255,0.5);
-		}
-
-		.carousel-control.left{background-image: none; left: -40px; position: absolute; z-index: 10;}
-		.carousel-control.right{background-image: none; right: -40px;}
-
-		.event-node .panel.panel-default{position: relative;}
-
-		.panel-body{padding: 0;}
-
-		.panel-footer{ position: absolute; bottom: 0; left: 0; right: 0; }
-
-		 /* Move the Navigation key inside to be visible */
-		@media (max-width: 600px) {
-			.carousel-control.left{left: -10px;}
-			.carousel-control.right{right: -10px;}
-		}
-
-		@media (min-width: 1100px) {
-			#pastCarousel .event-node:hover .event-desc{display: block !important;} 
-		}
+		
 	</style>
 
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
