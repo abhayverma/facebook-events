@@ -14,6 +14,11 @@ class FacebookHelper
 
 	public function __construct()
 	{
+
+        if(!session_id()) {
+            session_start();
+        }
+
 		$facebook = new Facebook\Facebook([
                             'app_id' => env('FB_CLIENT_ID'),
                             'app_secret' => env('FB_CLIENT_SECRET'),
