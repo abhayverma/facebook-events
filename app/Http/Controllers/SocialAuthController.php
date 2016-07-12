@@ -19,7 +19,7 @@ class SocialAuthController extends Controller
 
     public function index()
     {
-        if( ! Session::has('fb_access_token'))    return redirect()->to('home');
+        if(Session::has('fb_access_token'))    return redirect()->to('home');
 
         $loginUrl  = $this->fbHelper->getLoginUrl(env('FB_REDIRECT_CALLBACK_URL'), ['manage_pages', 'user_events']);
 
